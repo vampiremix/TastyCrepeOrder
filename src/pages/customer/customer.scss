@@ -1,0 +1,32 @@
+page-customer {
+    [detailfont] {
+        font-size: medium;
+        text-align: center;
+    }
+    [headerfont] {
+        font-size: medium;
+        text-align: center;
+        font-weight: bold;
+    }
+    .item-md ion-avatar {
+        min-width: 60px;
+        min-height: 60px;
+    }
+    .item-md ion-avatar img {
+        width: 60px;
+        height: 60px;
+    }
+    .item-content {
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+    .list-header-md {
+        padding-left: 0px;
+    }
+    .item-divider-md {
+        padding-left: 0px;
+    }
+    .item-md ion-avatar[item-right] {
+        margin: 0px;
+    }
+}

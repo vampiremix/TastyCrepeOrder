@@ -1,0 +1,76 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons start>
+            <button ion-button icon-center icon-only (click)="openMenu()">
+              <ion-icon name="menu"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title><img src="./img/homeTop-02.png" width="80%"></ion-title>
+        <ion-buttons end>
+            <button ion-button icon-center icon-only (click)="openOrdering()">
+              <ion-icon name="add"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+    <ion-list-header text-center style="border-bottom: solid 1px black;">
+        <ion-grid>
+            <ion-row>
+                <ion-col col-3 align-self-center headerfont>ลูกค้า</ion-col>
+                <ion-col col-3 align-self-center headerfont>ออเดอร์</ion-col>
+                <ion-col col-3 align-self-center headerfont>วันที่ออเดอร์</ion-col>
+                <ion-col col-3 align-self-center headerfont>วันที่รับ</ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-list-header>
+
+    <ion-list>
+        <ion-item-divider>
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-3 detailfont align-self-center>
+                        <ion-thumbnail>
+                            <ion-avatar item-left item-right>
+                                <img src="./img/social-varese-profilo.png" avartar>
+                            </ion-avatar>
+                        </ion-thumbnail>
+                        เจี๊ยบ
+                    </ion-col>
+                    <ion-col col-3 detailfont align-self-center>
+                        ชิฟฟ่อน
+                    </ion-col>
+                    <ion-col col-3 detailfont align-self-center>
+                        12-5-2017
+                    </ion-col>
+                    <ion-col col-3 detailfont align-self-center>
+                        14-5-2017
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-item-divider>
+    </ion-list>
+</ion-content>
+
+<ion-menu [content]="content">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Pages</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <button ion-item (click)="openPage(loginPage)">
+        ลูกค้า
+      </button>
+            <button ion-item (click)="openPage(signupPage)">
+        ขนม
+      </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>

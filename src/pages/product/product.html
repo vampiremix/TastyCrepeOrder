@@ -1,0 +1,49 @@
+<!--
+  Generated template for the Product page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>สินค้า</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-center icon-only (click)="openAddproduct()">
+              <ion-icon name="add"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-list-header text-center style="border-bottom: solid 1px black;">
+        <ion-grid>
+            <ion-row>
+                <ion-col col-6 align-self-center headerfont>ชื่อสินค้า</ion-col>
+                <ion-col col-6 align-self-center headerfont>ราคา</ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-list-header>
+
+    <ion-list>
+        <ion-refresher (ionRefresh)="doRefresh($event)">
+            <ion-refresher-content>
+                <ion-item-divider>
+                    <!--<ion-grid>-->
+                    <ion-row *ngFor="let pro of products">
+                        <ion-col col-6 detailfont align-self-center>
+                            {{pro.Name}}
+                        </ion-col>
+                        <ion-col col-6 detailfont align-self-center>
+                            {{pro.Price}}
+                        </ion-col>
+
+                    </ion-row>
+                    <!--</ion-grid>-->
+                </ion-item-divider>
+            </ion-refresher-content>
+        </ion-refresher>
+    </ion-list>
+</ion-content>
